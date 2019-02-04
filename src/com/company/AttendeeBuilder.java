@@ -34,6 +34,8 @@ public class AttendeeBuilder  {
 
         attendeeDirectory.addAttendee(attendee);
 
+        System.out.println("You are now registered with ID: " + attendeeID);
+
     }
 
 }

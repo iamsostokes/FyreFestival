@@ -16,24 +16,30 @@ public class FestivalDemo {
         final String register = "1";
         final String lookUpAccount = "2";
         final String isAnAdmin = "1234";
+        boolean shouldContinue = true;
 
         int attendeeID = 1000;
 
-        menu.showMainMenu();
-        userInput = scan.nextLine();
+      do {
+          menu.showMainMenu();
+          userInput = scan.nextLine();
 
-        switch(userInput) {
-            case register: attendeeBuilder.registerAttendee(attendeeID, attendeeDirectory);
-                attendeeID++;
-                attendeeDirectory.print();
-                break;
-            case lookUpAccount:
-                break;
-            case isAnAdmin:
-                break;
-            default:
-                break;
-        }
-
+          switch (userInput) {
+              case register:
+                  attendeeBuilder.registerAttendee(attendeeID, attendeeDirectory);
+                  attendeeID++;
+                  attendeeDirectory.print();
+                  break;
+              case lookUpAccount:
+                  System.out.println("Please enter your Attendee ID");
+                  int inputID = scan.nextInt();
+                  attendeeDirectory.getAttendeeInfoByID(inputID);
+                  break;
+              case isAnAdmin:
+                  break;
+              default:
+                  break;
+          }
+      }while(shouldContinue);
     }
 }
