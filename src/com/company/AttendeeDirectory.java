@@ -10,4 +10,8 @@ public class AttendeeDirectory {
         directory.add(attendee);
     }
 
+    public void print() {
+        System.out.println(directory);
+    }
+
 }

@@ -6,7 +6,7 @@ public class Attendee {
     private String address;
     private String arrivalDate;
     private String specialRequest;
-    private String idNumber;
+    private int idNumber;
     private boolean VIP;
     private String state;
 
@@ -42,11 +42,11 @@ public class Attendee {
         this.specialRequest = specialRequest;
     }
 
-    public String getIdNumber() {
+    public int getIdNumber() {
         return idNumber;
     }
 
-    public void setIdNumber(String idNumber) {
+    public void setIdNumber(int idNumber) {
         this.idNumber = idNumber;
     }
 
