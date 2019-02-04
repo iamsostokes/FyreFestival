@@ -10,6 +10,8 @@ public class FestivalDemo {
         UserMenu menu = new UserMenu();
         AttendeeDirectory attendeeDirectory = new AttendeeDirectory();
         AttendeeBuilder attendeeBuilder = new AttendeeBuilder();
+        AdminMenuHelper adminMenuHelper = new AdminMenuHelper();
+
         Scanner scan = new Scanner(System.in);
         String userInput;
 
@@ -36,6 +38,8 @@ public class FestivalDemo {
                   attendeeDirectory.getAttendeeInfoByID(inputID);
                   break;
               case isAnAdmin: menu.showAdmin();
+                    userInput = scan.nextLine();
+                    adminMenuHelper.handleMenuRequest(userInput, attendeeDirectory);
                   break;
               default:
                   break;

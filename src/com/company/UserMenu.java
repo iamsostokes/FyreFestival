@@ -3,7 +3,7 @@ package com.company;
 public class UserMenu {
 
     public void showMainMenu () {
-        System.out.println("Would you like to \n" +
+        System.out.println("Would you like to (or 1234 for secret Admin menu) \n" +
                 "1. Register for the Fyre Festival \n" +
                 "2. Look up a account");
     }
@@ -20,3 +20,6 @@ public class UserMenu {
     }
 
 }
+
+
+//we are working on the admin menu helper
