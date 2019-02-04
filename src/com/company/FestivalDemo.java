@@ -35,7 +35,7 @@ public class FestivalDemo {
                   int inputID = scan.nextInt();
                   attendeeDirectory.getAttendeeInfoByID(inputID);
                   break;
-              case isAnAdmin:
+              case isAnAdmin: menu.showAdmin();
                   break;
               default:
                   break;
