@@ -12,7 +12,7 @@ public class AttendeeDirectory {
         attendee1.setName("Ja Rule");
         attendee1.setIdNumber(5555);
         attendee1.setState("NY");
-        attendee1.setVIP(true);
+        attendee1.setVIP(false);
 
         Attendee attendee2 = new Attendee();
         attendee2.setName("Billy");
@@ -64,6 +64,16 @@ public class AttendeeDirectory {
             }
         }
 
+
+    }
+
+    public void makeAttendeeVIP(int attendeeID) {
+        for (int i=0; i < directory.size(); i++){
+            if (directory.get(i).getIdNumber() == attendeeID){
+                directory.get(i).setVIP(true);
+                System.out.println("Attendee with ID of " + attendeeID + " has been given VIP status.");
+            }
+        }
 
     }
 

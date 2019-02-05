@@ -22,6 +22,10 @@ public void handleMenuRequest(String userInput, AttendeeDirectory attendeeDirect
 
     } else if (userInput.equals("4")) {
 
+        System.out.println("Enter the Attendee ID number that you would like to make VIP?");
+        adminInput = scan.nextInt();
+        attendeeDirectory.makeAttendeeVIP(adminInput);
+
     } else if (userInput.equals("5")) {
 
     } else if (userInput.equals("6")) {
