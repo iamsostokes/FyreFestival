@@ -10,6 +10,11 @@ public class Attendee {
     private boolean VIP;
     private String state;
 
+    public void printDetails(){
+        System.out.println("Attendee Name: " + name + " Address: " + address + " Arrival Date: " + arrivalDate +
+                " Special Requests: " + specialRequest + " ID Number: " + idNumber + " VIP Status " + VIP + " State: " + state );
+    }
+
     public String getName() {
         return name;
     }

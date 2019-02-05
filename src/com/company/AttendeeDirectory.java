@@ -77,6 +77,14 @@ public class AttendeeDirectory {
 
     }
 
+    public void getAttendeeByState(String attendeeState) {
+        for (int i=0; i < directory.size(); i++){
+            if (directory.get(i).getState().equals(attendeeState)){
+                directory.get(i).printDetails();
+            }
+        }
+    }
+
 
 
 }

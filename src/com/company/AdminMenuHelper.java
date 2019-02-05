@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AdminMenuHelper {
 
     int adminInput;
-
+    String adminStringInput;
 public void handleMenuRequest(String userInput, AttendeeDirectory attendeeDirectory, Scanner scan){
     if (userInput.equals("1")) {
 
@@ -27,6 +27,10 @@ public void handleMenuRequest(String userInput, AttendeeDirectory attendeeDirect
         attendeeDirectory.makeAttendeeVIP(adminInput);
 
     } else if (userInput.equals("5")) {
+
+        System.out.println("What State? Please enter the state abbreviation.");
+        adminStringInput = scan.nextLine();
+        attendeeDirectory.getAttendeeByState(adminStringInput);
 
     } else if (userInput.equals("6")) {
 
