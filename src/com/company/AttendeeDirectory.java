@@ -27,6 +27,13 @@ public class AttendeeDirectory {
 
     }
 
+    public void viewALLAttendees () {
+        for (int i = 0; i < directory.size(); i++) {
+           directory.get(i).printDetails();
+
+        }
+    }
+
 
     public void addAttendee (Attendee attendee) {
         directory.add(attendee);

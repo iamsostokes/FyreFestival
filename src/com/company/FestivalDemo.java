@@ -17,6 +17,7 @@ public class FestivalDemo {
 
         final String register = "1";
         final String lookUpAccount = "2";
+        final String exit = "3";
         final String isAnAdmin = "1234";
         boolean shouldContinue = true;
 
@@ -30,16 +31,32 @@ public class FestivalDemo {
               case register:
                   attendeeBuilder.registerAttendee(attendeeID, attendeeDirectory);
                   attendeeID++;
-                  attendeeDirectory.print();
                   break;
               case lookUpAccount:
                   System.out.println("Please enter your Attendee ID");
                   int inputID = scan.nextInt();
                   attendeeDirectory.getAttendeeInfoByID(inputID);
                   break;
-              case isAnAdmin: menu.showAdmin();
-                    userInput = scan.nextLine();
-                    adminMenuHelper.handleMenuRequest(userInput, attendeeDirectory, scan);
+              case isAnAdmin:
+
+                  boolean continueAdminMenu;
+                  do{
+                      continueAdminMenu = true;
+
+                       menu.showAdmin();
+                       userInput = scan.nextLine();
+
+                      if(userInput.equals("6")){
+                          continueAdminMenu = false;
+                      } else {
+                          adminMenuHelper.handleMenuRequest(userInput, attendeeDirectory, scan);
+                      }
+
+                   }while(continueAdminMenu);
+                  break;
+              case exit:
+                  shouldContinue = false;
+                  System.out.println("Goodbye");
                   break;
               default:
                   break;
