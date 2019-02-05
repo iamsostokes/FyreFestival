@@ -6,6 +6,28 @@ public class AttendeeDirectory {
 
     ArrayList<Attendee> directory = new ArrayList<>();
 
+
+    public AttendeeDirectory(){
+        Attendee attendee1 = new Attendee();
+        attendee1.setName("Ja Rule");
+        attendee1.setIdNumber(5555);
+        attendee1.setState("NY");
+        attendee1.setVIP(true);
+
+        Attendee attendee2 = new Attendee();
+        attendee2.setName("Billy");
+        attendee2.setIdNumber(5556);
+        attendee2.setState("NY");
+        attendee2.setVIP(true);
+
+        directory.add(attendee1);
+
+
+        directory.add(attendee2);
+
+    }
+
+
     public void addAttendee (Attendee attendee) {
         directory.add(attendee);
     }
@@ -29,4 +51,22 @@ public class AttendeeDirectory {
         }
 
     }
+
+
+    public void cancelAttendeeByID(int attendeeID) {
+
+
+        for(int i = 0; i < directory.size(); i++){
+            if(directory.get(i).getIdNumber() == attendeeID){
+                directory.remove(i);
+                System.out.println("The registration with ID " + attendeeID + " has been canceled.");
+
+            }
+        }
+
+
+    }
+
+
+
 }
