@@ -22,4 +22,3 @@ public class UserMenu {
 }
 
 
-//we are working on the admin menu helper

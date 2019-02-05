@@ -39,7 +39,7 @@ public class FestivalDemo {
                   break;
               case isAnAdmin: menu.showAdmin();
                     userInput = scan.nextLine();
-                    adminMenuHelper.handleMenuRequest(userInput, attendeeDirectory);
+                    adminMenuHelper.handleMenuRequest(userInput, attendeeDirectory, scan);
                   break;
               default:
                   break;
